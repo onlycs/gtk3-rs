@@ -9,9 +9,7 @@ documentation = "https://gtk-rs.org/gtk3-rs/stable/latest/docs/gdk/"
 version = "0.19.0"
 description = "Rust bindings for the GDK 3 library"
 repository = "https://github.com/gtk-rs/gtk3-rs"
-exclude = [
-    "gir-files/*",
-]
+exclude = ["gir-files/*"]
 edition = "2021"
 rust-version = "1.70"
 
@@ -31,7 +29,7 @@ ffi = { package = "gdk-sys", path = "sys" }
 cairo-rs = { git = "https://github.com/gtk-rs/gtk-rs-core" }
 gdk-pixbuf = { git = "https://github.com/gtk-rs/gtk-rs-core" }
 gio = { git = "https://github.com/gtk-rs/gtk-rs-core" }
-glib = { git = "https://github.com/gtk-rs/gtk-rs-core" }
+glib = { path = "../glib-reexport" }
 pango = { git = "https://github.com/gtk-rs/gtk-rs-core" }
 
 [dev-dependencies]

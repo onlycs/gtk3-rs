@@ -43,7 +43,7 @@ ffi = { package = "gtk-sys", path = "sys" }
 gtk3-macros = { path = "../gtk3-macros" }
 cairo-rs = { git = "https://github.com/gtk-rs/gtk-rs-core" }
 gio = { git = "https://github.com/gtk-rs/gtk-rs-core" }
-glib = { git = "https://github.com/gtk-rs/gtk-rs-core" }
+glib = { path = "../glib-reexport" }
 gdk = { path = "../gdk" }
 gdk-pixbuf = { git = "https://github.com/gtk-rs/gtk-rs-core" }
 pango = { git = "https://github.com/gtk-rs/gtk-rs-core" }
