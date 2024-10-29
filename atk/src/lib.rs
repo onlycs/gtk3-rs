@@ -26,4 +26,4 @@ mod editable_text;
 mod table;
 mod text_rectangle;
 
-pub use ffi::ImplementorIface;
+pub use ffi::AtkImplementorIface as ImplementorIFace;
