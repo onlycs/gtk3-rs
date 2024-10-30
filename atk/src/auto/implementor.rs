@@ -3,48 +3,14 @@
 // DO NOT EDIT
 
 use crate::{ffi, Object};
+use glib::prelude::*;
 use glib::translate::*;
 
 glib::wrapper! {
     #[derive(Debug, PartialEq, Eq, PartialOrd, Ord, Hash)]
-    pub struct Implementor(Boxed<ffi::AtkImplementor>);
+    pub struct ImplementorIFace(Interface<ffi::AtkImplementor, ffi::AtkImplementorIface>);
 
     match fn {
-        copy => |ptr| ffi::atk_implementor_ref(ptr),
-        free => |ptr| ffi::atk_implementor_unref(ptr),
-        get_type => || ffi::atk_implementor_get_type(),
-    }
-}
-
-glib::wrapper! {
-    #[derive(Debug, PartialEq, Eq, PartialOrd, Ord, Hash)]
-    pub struct ImplementorIFace(Boxed<ffi::AtkImplementorIface>);
-
-    match fn {
-        copy => |ptr| ffi::atk_implementor_ref(ptr),
-        free => |ptr| ffi::atk_implementor_unref(ptr),
-        get_type => || ffi::atk_implementor_get_type(),
-    }
-}
-
-impl Implementor {
-    #[doc(alias = "atk_implementor_ref_accessible")]
-    pub fn ref_accessible(&mut self) -> Option<Object> {
-        unsafe {
-            from_glib_full(ffi::atk_implementor_ref_accessible(
-                self.to_glib_none_mut().0,
-            ))
-        }
-    }
-}
-
-impl ImplementorIFace {
-    #[doc(alias = "atk_implementor_ref_accessible")]
-    pub fn ref_accessible(&mut self) -> Option<Object> {
-        unsafe {
-            from_glib_full(ffi::atk_implementor_ref_accessible(
-                self.to_glib_none_mut().0,
-            ))
-        }
+        type_ => || ffi::atk_implementor_get_type(),
     }
 }

@@ -87,7 +87,7 @@ mod window;
 pub use self::window::Window;
 
 mod implementor;
-pub use self::implementor::Implementor;
+pub use self::implementor::ImplementorIFace;
 
 mod range;
 pub use self::range::Range;
