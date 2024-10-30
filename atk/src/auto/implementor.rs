@@ -7,7 +7,7 @@ use glib::prelude::*;
 use glib::translate::*;
 
 glib::wrapper! {
-    pub struct ImplementorIFace(Interface<ffi::AtkImplementor, ffi::AtkImplementorIface>);
+    pub struct ImplementorIface(Interface<ffi::AtkImplementor, ffi::AtkImplementorIface>);
 
     match fn {
         type_ => || ffi::atk_implementor_get_type(),
