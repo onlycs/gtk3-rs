@@ -943,7 +943,7 @@ pub use self::constants::STYLE_PROPERTY_FONT;
 pub use self::constants::STYLE_PROPERTY_MARGIN;
 pub use self::constants::STYLE_PROPERTY_PADDING;
 
-pub(crate) mod traits {
+pub mod traits {
     pub use super::about_dialog::AboutDialogExt;
     pub use super::accel_group::AccelGroupExt;
     pub use super::accel_label::AccelLabelExt;
