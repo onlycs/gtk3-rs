@@ -7,7 +7,6 @@ use glib::prelude::*;
 use glib::translate::*;
 
 glib::wrapper! {
-    #[derive(Debug, PartialEq, Eq, PartialOrd, Ord, Hash)]
     pub struct ImplementorIFace(Interface<ffi::AtkImplementor, ffi::AtkImplementorIface>);
 
     match fn {
