@@ -554,6 +554,9 @@ pub use self::stack_switcher::StackSwitcher;
 mod statusbar;
 pub use self::statusbar::Statusbar;
 
+mod style;
+pub use self::style::Style;
+
 mod style_context;
 pub use self::style_context::StyleContext;
 
@@ -943,7 +946,7 @@ pub use self::constants::STYLE_PROPERTY_FONT;
 pub use self::constants::STYLE_PROPERTY_MARGIN;
 pub use self::constants::STYLE_PROPERTY_PADDING;
 
-pub mod traits {
+pub(crate) mod traits {
     pub use super::about_dialog::AboutDialogExt;
     pub use super::accel_group::AccelGroupExt;
     pub use super::accel_label::AccelLabelExt;
@@ -1085,6 +1088,7 @@ pub mod traits {
     pub use super::stack_sidebar::StackSidebarExt;
     pub use super::stack_switcher::StackSwitcherExt;
     pub use super::statusbar::StatusbarExt;
+    pub use super::style::StyleExt;
     pub use super::style_context::StyleContextExt;
     pub use super::style_provider::StyleProviderExt;
     pub use super::switch::SwitchExt;

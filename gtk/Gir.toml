@@ -119,6 +119,7 @@ generate = [
 	"Gtk.StyleContextPrintFlags",
 	"Gtk.StyleProperties",
 	"Gtk.StyleProvider",
+	"Gtk.Style",
 	"Gtk.TargetFlags",
 	"Gtk.TextAttributes",
 	"Gtk.TextChildAnchor",
