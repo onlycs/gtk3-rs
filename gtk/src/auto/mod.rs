@@ -806,7 +806,7 @@ pub use self::flags::TextSearchFlags;
 pub use self::flags::ToolPaletteDragTargets;
 pub use self::flags::TreeModelFlags;
 
-pub(crate) mod functions;
+pub mod functions;
 
 mod constants;
 pub use self::constants::LEVEL_BAR_OFFSET_FULL;
@@ -946,7 +946,7 @@ pub use self::constants::STYLE_PROPERTY_FONT;
 pub use self::constants::STYLE_PROPERTY_MARGIN;
 pub use self::constants::STYLE_PROPERTY_PADDING;
 
-pub(crate) mod traits {
+pub mod traits {
     pub use super::about_dialog::AboutDialogExt;
     pub use super::accel_group::AccelGroupExt;
     pub use super::accel_label::AccelLabelExt;
@@ -1009,16 +1009,16 @@ pub(crate) mod traits {
     pub use super::font_chooser::FontChooserExt;
     pub use super::font_chooser_widget::FontChooserWidgetExt;
     pub use super::frame::FrameExt;
-    pub use super::gl_area::GLAreaExt;
     pub use super::gesture::GestureExt;
     pub use super::gesture_drag::GestureDragExt;
     pub use super::gesture_single::GestureSingleExt;
+    pub use super::gl_area::GLAreaExt;
     pub use super::grid::GridExt;
     pub use super::header_bar::HeaderBarExt;
-    pub use super::im_context::IMContextExt;
-    pub use super::im_multicontext::IMMulticontextExt;
     pub use super::icon_theme::IconThemeExt;
     pub use super::icon_view::IconViewExt;
+    pub use super::im_context::IMContextExt;
+    pub use super::im_multicontext::IMMulticontextExt;
     pub use super::image::ImageExt;
     pub use super::info_bar::InfoBarExt;
     pub use super::invisible::InvisibleExt;
@@ -1045,12 +1045,12 @@ pub(crate) mod traits {
     pub use super::overlay::OverlayExt;
     pub use super::paned::PanedExt;
     #[cfg(gdk_backend = "x11")]
-#[cfg_attr(docsrs, doc(cfg(gdk_backend = "x11")))]
+    #[cfg_attr(docsrs, doc(cfg(gdk_backend = "x11")))]
     pub use super::plug::PlugExt;
     #[cfg(gdk_backend = "x11")]
-#[cfg_attr(docsrs, doc(cfg(gdk_backend = "x11")))]
+    #[cfg_attr(docsrs, doc(cfg(gdk_backend = "x11")))]
     #[cfg(feature = "v3_24_30")]
-#[cfg_attr(docsrs, doc(cfg(feature = "v3_24_30")))]
+    #[cfg_attr(docsrs, doc(cfg(feature = "v3_24_30")))]
     pub use super::plug_accessible::PlugAccessibleExt;
     pub use super::popover::PopoverExt;
     pub use super::print_operation::PrintOperationExt;
@@ -1075,12 +1075,12 @@ pub(crate) mod traits {
     pub use super::shortcuts_window::ShortcutsWindowExt;
     pub use super::size_group::SizeGroupExt;
     #[cfg(gdk_backend = "x11")]
-#[cfg_attr(docsrs, doc(cfg(gdk_backend = "x11")))]
+    #[cfg_attr(docsrs, doc(cfg(gdk_backend = "x11")))]
     pub use super::socket::GtkSocketExt;
     #[cfg(gdk_backend = "x11")]
-#[cfg_attr(docsrs, doc(cfg(gdk_backend = "x11")))]
+    #[cfg_attr(docsrs, doc(cfg(gdk_backend = "x11")))]
     #[cfg(feature = "v3_24_30")]
-#[cfg_attr(docsrs, doc(cfg(feature = "v3_24_30")))]
+    #[cfg_attr(docsrs, doc(cfg(feature = "v3_24_30")))]
     pub use super::socket_accessible::SocketAccessibleExt;
     pub use super::spin_button::SpinButtonExt;
     pub use super::spinner::SpinnerExt;
@@ -1122,7 +1122,7 @@ pub(crate) mod traits {
     pub use super::window::GtkWindowExt;
     pub use super::window_group::WindowGroupExt;
 }
-pub(crate) mod builders {
+pub mod builders {
     pub use super::about_dialog::AboutDialogBuilder;
     pub use super::accel_label::AccelLabelBuilder;
     pub use super::action_bar::ActionBarBuilder;
@@ -1172,7 +1172,6 @@ pub(crate) mod builders {
     pub use super::font_chooser_dialog::FontChooserDialogBuilder;
     pub use super::font_chooser_widget::FontChooserWidgetBuilder;
     pub use super::frame::FrameBuilder;
-    pub use super::gl_area::GLAreaBuilder;
     pub use super::gesture_drag::GestureDragBuilder;
     pub use super::gesture_long_press::GestureLongPressBuilder;
     pub use super::gesture_multi_press::GestureMultiPressBuilder;
@@ -1180,14 +1179,15 @@ pub(crate) mod builders {
     pub use super::gesture_rotate::GestureRotateBuilder;
     pub use super::gesture_swipe::GestureSwipeBuilder;
     pub use super::gesture_zoom::GestureZoomBuilder;
+    pub use super::gl_area::GLAreaBuilder;
     pub use super::grid::GridBuilder;
     pub use super::header_bar::HeaderBarBuilder;
     #[cfg(feature = "v3_24_11")]
-#[cfg_attr(docsrs, doc(cfg(feature = "v3_24_11")))]
+    #[cfg_attr(docsrs, doc(cfg(feature = "v3_24_11")))]
     pub use super::header_bar_accessible::HeaderBarAccessibleBuilder;
+    pub use super::icon_view::IconViewBuilder;
     pub use super::im_context_simple::IMContextSimpleBuilder;
     pub use super::im_multicontext::IMMulticontextBuilder;
-    pub use super::icon_view::IconViewBuilder;
     pub use super::info_bar::InfoBarBuilder;
     pub use super::invisible::InvisibleBuilder;
     pub use super::label::LabelBuilder;
@@ -1212,12 +1212,12 @@ pub(crate) mod builders {
     pub use super::paned::PanedBuilder;
     pub use super::places_sidebar::PlacesSidebarBuilder;
     #[cfg(gdk_backend = "x11")]
-#[cfg_attr(docsrs, doc(cfg(gdk_backend = "x11")))]
+    #[cfg_attr(docsrs, doc(cfg(gdk_backend = "x11")))]
     pub use super::plug::PlugBuilder;
     #[cfg(gdk_backend = "x11")]
-#[cfg_attr(docsrs, doc(cfg(gdk_backend = "x11")))]
+    #[cfg_attr(docsrs, doc(cfg(gdk_backend = "x11")))]
     #[cfg(feature = "v3_24_30")]
-#[cfg_attr(docsrs, doc(cfg(feature = "v3_24_30")))]
+    #[cfg_attr(docsrs, doc(cfg(feature = "v3_24_30")))]
     pub use super::plug_accessible::PlugAccessibleBuilder;
     pub use super::popover::PopoverBuilder;
     pub use super::popover_menu::PopoverMenuBuilder;
@@ -1246,12 +1246,12 @@ pub(crate) mod builders {
     pub use super::shortcuts_window::ShortcutsWindowBuilder;
     pub use super::size_group::SizeGroupBuilder;
     #[cfg(gdk_backend = "x11")]
-#[cfg_attr(docsrs, doc(cfg(gdk_backend = "x11")))]
+    #[cfg_attr(docsrs, doc(cfg(gdk_backend = "x11")))]
     pub use super::socket::SocketBuilder;
     #[cfg(gdk_backend = "x11")]
-#[cfg_attr(docsrs, doc(cfg(gdk_backend = "x11")))]
+    #[cfg_attr(docsrs, doc(cfg(gdk_backend = "x11")))]
     #[cfg(feature = "v3_24_30")]
-#[cfg_attr(docsrs, doc(cfg(feature = "v3_24_30")))]
+    #[cfg_attr(docsrs, doc(cfg(feature = "v3_24_30")))]
     pub use super::socket_accessible::SocketAccessibleBuilder;
     pub use super::spin_button::SpinButtonBuilder;
     pub use super::spinner::SpinnerBuilder;
